@@ -1,0 +1,7 @@
+services:
+  - name: web
+    envVars:
+      - key: SECRET_KEY
+        fromFile: .env
+      - key: DATABASE_URL
+        fromFile: .env

@@ -79,6 +79,7 @@ class Register(Resource):
         print("this is register")
         data = request.json
         username = data.get('username')
+        email = data.get('email')
         password = data.get('password')  
         role = data.get('role', 'user')
 
@@ -87,7 +88,7 @@ class Register(Resource):
         if existing_user:
             return {"message": "Username already exists"}, 400
 
-        new_user = User(username=username, password=password, role=role)
+        new_user = User(username=username,email=email, password=password, role=role)
         db.session.add(new_user)
         db.session.commit()
 
@@ -98,16 +99,21 @@ class Login(Resource):
     def post(self):
         data = request.json
         print(data)
-        username = data.get('username')
+        # username = data.get('username')
+        email = data.get('email')
         password = data.get('password')
 
-        user = User.query.filter_by(username=username, password=password).first()
+        user = User.query.filter_by(email=email, password=password).first()
 
         if user:
             # Create a JWT token
             token = jwt.encode({'user_id': user.user_id, 'exp': datetime.datetime.utcnow() + datetime.timedelta(hours=1)},
                               app.config['SECRET_KEY'], algorithm='HS256')
-            return {'token': token}
+            user_id=user.user_id
+            email=user.email
+            username=user.username
+            role=user.role
+            return {'token': token,'user_id':user_id,'email':email,'username':username,'role':role}
 
         return {'message': 'Invalid credentials'}, 401
 

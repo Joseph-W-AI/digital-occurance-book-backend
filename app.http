@@ -4,8 +4,9 @@ POST http://127.0.0.1:5000/register
 Content-Type: application/json
 
 {
-    "username": "Robinson",
-    "password": "3W!W.:srzc4r^!P",
+    "username": "Robinson1",
+    "email": "Robinson12@gmail.com",
+    "password": "123456",
     "role":"user"
 }
 
@@ -15,8 +16,8 @@ POST http://127.0.0.1:5000/login
 Content-Type: application/json
 
 {
-    "username": "Robinson",
-    "password": "3W!W.:srzc4r^!P"
+    "email": "Robinson12@gmail.com",
+    "password": "123456"
 }
 
 
@@ -24,7 +25,7 @@ Content-Type: application/json
 ## GET USERS 
 GET http://127.0.0.1:5000/users
 Content-Type: application/json
-Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE3MDY1MTQyMjl9.tkeAAbH8M3hiQYVy1y8_7W6yHxyO35uhFp2glVfB5hM
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE3MDY1MzYyNDd9.9W7JcLXykueet0iQTIqvshQFdY9wYQ2C8hyzDUVXtxc
 
 ###
 # GET INDIVIDUAL USER
@@ -65,10 +66,10 @@ Content-Type: application/json
 Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxfQ.yQ0a3wDcLLSlckbZowXTgM3gjsSs8uHhhuFKJ02RXvg
 
 {
-    "name": "Child Rap",
-    "accused": "Admin 1",
+    "name": "Child Rap4",
+    "accused": "Admin 451",
     "victim": "Tabia",
-    "reported_by": "TabiaMum",
+    "reported_by": "TabiaMum5445",
     "location": "Mombasa",
     "date": "2024-01-24 15:30:00",
     "message": " If you need assistance or information related to a specific aspect of incidents or support services, please provide more details or ask a specific question. Additionally,",
