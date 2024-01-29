@@ -1,0 +1,88 @@
+###
+## REGISTER USER
+POST http://127.0.0.1:5000/register
+Content-Type: application/json
+
+{
+    "username": "Robinson",
+    "password": "3W!W.:srzc4r^!P",
+    "role":"user"
+}
+
+###
+## LOGIN USER
+POST http://127.0.0.1:5000/login
+Content-Type: application/json
+
+{
+    "username": "Robinson",
+    "password": "3W!W.:srzc4r^!P"
+}
+
+
+###
+## GET USERS 
+GET http://127.0.0.1:5000/users
+Content-Type: application/json
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE3MDY1MTQyMjl9.tkeAAbH8M3hiQYVy1y8_7W6yHxyO35uhFp2glVfB5hM
+
+###
+# GET INDIVIDUAL USER
+GET http://127.0.0.1:5000/users/1
+Content-Type: application/json
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE3MDYxNzkyODd9.p6TpuavLDCQN9UEsWyBOU1S3X3I1ux8CXo_gMJdkha8
+
+###
+# DELETE INDIVIDUAL USER
+DELETE http://127.0.0.1:5000/users/1
+Content-Type: application/json
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE3MDYxNzkyODd9.p6TpuavLDCQN9UEsWyBOU1S3X3I1ux8CXo_gMJdkha8
+###
+# UPDATE INDIVIDUAL USER
+PUT http://127.0.0.1:5000/users/1
+Content-Type: application/json
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE3MDYxNzkyODd9.p6TpuavLDCQN9UEsWyBOU1S3X3I1ux8CXo_gMJdkha8
+
+
+{
+    "username": "Ngecu1",
+    "password": "3W!W.:srzc4r^!P",
+    "role":"user"
+}
+
+
+
+###
+# GET ALL INCIDENTS 
+GET http://127.0.0.1:5000/incidents
+Content-Type: application/json
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxfQ.yQ0a3wDcLLSlckbZowXTgM3gjsSs8uHhhuFKJ02RXvg
+
+###
+# ADD AN INCIDENT 
+POST http://127.0.0.1:5000/incidents
+Content-Type: application/json
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxfQ.yQ0a3wDcLLSlckbZowXTgM3gjsSs8uHhhuFKJ02RXvg
+
+{
+    "name": "Child Rap",
+    "accused": "Admin 1",
+    "victim": "Tabia",
+    "reported_by": "TabiaMum",
+    "location": "Mombasa",
+    "date": "2024-01-24 15:30:00",
+    "message": " If you need assistance or information related to a specific aspect of incidents or support services, please provide more details or ask a specific question. Additionally,",
+    "status": "progress"
+}
+
+###
+# GET INDIVIDUAL INCIDENT 
+GET http://127.0.0.1:5000/incidents/1
+Content-Type: application/json
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxfQ.yQ0a3wDcLLSlckbZowXTgM3gjsSs8uHhhuFKJ02RXvg
+
+###
+# DELETE INDIVIDUAL INCIDENT 
+DELETE http://127.0.0.1:5000/incidents/1
+Content-Type: application/json
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxfQ.yQ0a3wDcLLSlckbZowXTgM3gjsSs8uHhhuFKJ02RXvg
